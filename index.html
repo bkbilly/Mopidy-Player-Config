@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    
+    <script>
+      function myFunction(){
+        mopidyIP = $('#MopidyIP').val();
+        mopidyPort = $('#MopidyPort').val();
+        var options = { ip: mopidyIP, port: mopidyPort };
+        document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
+      }
+    </script>
+  </head>
+<body>
+  <nav class="top-nav">
+    <div class="container">
+      <div class="nav-wrapper" style="font-size:6vw;">Mopidy Configuration</div>
+    </div>
+  </nav>
+
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s10">
+          <input id="MopidyIP" type="text" class="validate">
+          <label for="MopidyIP">Moppidy's IP Address</label>
+        </div>
+      <div class="row">
+        <div class="input-field col s10">
+          <input id="MopidyPort" type="text" class="validate">
+          <label for="MopidyPort">Moppidy's Port Number</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" onclick="myFunction()" name="action" >Submit</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
