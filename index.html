@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-    
+
     <script>
       function myFunction(){
         mopidyIP = $('#MopidyIP').val();
@@ -24,7 +24,7 @@
   </nav>
 
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" onsubmit="myFunction(); return false">
       <div class="row">
         <div class="input-field col s10">
           <input id="MopidyIP" type="text" class="validate">
@@ -36,7 +36,7 @@
           <label for="MopidyPort">Moppidy's Port Number</label>
         </div>
       </div>
-      <button class="btn waves-effect waves-light" type="submit" onclick="myFunction()" name="action" >Submit</button>
+      <button class="btn waves-effect waves-light" type="submit" onclick="" name="action" >Submit</button>
 
     </form>
   </div>
